@@ -1,4 +1,13 @@
 {
-  "extends": "../tsconfig.json",
-  "include": ["**/*.ts", "**/*.feature"]
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "types": ["cypress"],
+    "lib": ["ES2020", "DOM"]
+  },
+  "include": ["cypress.config.ts", "cypress", "reporter-config.js"]
 }

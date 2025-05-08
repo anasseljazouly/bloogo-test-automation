@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open --e2e",
-    "test": "cypress run --env tags='not @ignore' --config-file cypress.config.ts --e2e"
+    "test": "cypress run --e2e"
   },
   "keywords": [],
   "author": "",
@@ -20,17 +20,5 @@
     "mochawesome": "^7.1.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
-  },
-  "cypress-cucumber-preprocessor": {
-    "filterSpecs": false,
-    "nonGlobalStepDefinitions": true,
-    "omitFiltered": true,
-    "json": {
-      "enabled": true,
-      "output": "e2e/cucumber-logs/report.json"
-    },
-    "pretty": {
-      "enabled": true
-    }
   }
 }
