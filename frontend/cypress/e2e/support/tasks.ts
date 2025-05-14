@@ -8,39 +8,56 @@ dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 const MONGODB_URI = process.env.MONGODB_URI || '';
 const DB_NAME = 'test';
 
-export async function createTestUser({ email, password, isverified }) {
+async function withDatabase<T>(callback: (db: any) => Promise<T>): Promise<T> {
   const client = new MongoClient(MONGODB_URI);
-  await client.connect();
-  const db = client.db(DB_NAME);
-  const users = db.collection('user');
+  try {
+    await client.connect();
+    const db = client.db(DB_NAME);
+    return await callback(db);
+  } finally {
+    await client.close();
+  }
+}
 
-  const hashedPassword = await bcrypt.hash(password, 10);
+export async function createTestUser({
+  email,
+  password,
+  isverified
+}: {
+  email: string;
+  password: string;
+  isverified: boolean;
+}): Promise<null> {
+  await withDatabase(async (db) => {
+    const users = db.collection('user');
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-  await users.insertOne({
-    email,
-    password: hashedPassword,
-    isverified,
-    firstname: 'Test',
-    lastname: 'User',
-    dob: new Date('1990-01-01'),
-    createdon: new Date(),
-    isgooglelogin: false,
-    profileurl: '',
-    verification: isverified ? 'verified' : 'unverified'
+    await users.insertOne({
+      email,
+      password: hashedPassword,
+      isverified,
+      firstname: 'Test',
+      lastname: 'User',
+      dob: new Date('1990-01-01'),
+      createdon: new Date(),
+      isgooglelogin: false,
+      profileurl: '',
+      verification: isverified ? 'verified' : 'unverified'
+    });
   });
 
-  await client.close();
   return null;
 }
 
-export async function deleteTestUser({ email }) {
-  const client = new MongoClient(MONGODB_URI);
-  await client.connect();
-  const db = client.db(DB_NAME);
-  const users = db.collection('user');
+export async function deleteTestUser({
+  email
+}: {
+  email: string;
+}): Promise<void> {
+  await withDatabase(async (db) => {
+    const users = db.collection('user');
+    await users.deleteOne({ email });
+  });
 
-  // Delete the user by email
-  await users.deleteOne({ email });
-  client.close();
   return null;
 }
