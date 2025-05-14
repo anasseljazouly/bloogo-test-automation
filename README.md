@@ -9,6 +9,8 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Cypress](https://img.shields.io/badge/cypress-CA4245?style=for-the-badge&logo=cypress&logoColor=white&color=black)
+
 
 A Blog App for all Coders, Programmers, and other.
 
@@ -55,35 +57,9 @@ A Bloogo app made using react js as frontend and FastAPI as backend, and Storing
 10. **Account Verification through Email:**
     - _Description:_ Users undergo account verification through email, enhancing security and confirming valid user accounts.
 
-## Deployed Links
+## Forked Link
 
-[Bloogo APP](https://bloogo.vercel.app) Frontend
-
-[Bloogo API](https://bloogoapi.onrender.com) Backend
-
-## Used Technologies and Products
-
-1. [SMTPlib](https://docs.python.org/3/library/smtplib.html) for sending the email for account verification purpose.
-2. [logo.com](https://app.logo.com/) for Creating the Bloogo logo.
-3. [write.as](https://write.as/) Reference for creating the blog. Using The above website design.
-4. [Footer Design](https://preview.colorlib.com/theme/bft/bootstrap-footer-17/#) Footer Design has been taken from the above website.
-5. [Day.js](https://day.js.org/) Used for Formatting the Date recieved From backend.
-6. [React Markdown Viewer](https://uiwjs.github.io/react-markdown-preview/) For Viewing the blog post.
-7. [Animate.css](https://animate.style/) for Animating some components.
-8. [Formik](https://formik.org/) used for handling client side validation of form data.
-9. [yup](https://github.com/jquense/yup) used for creating the form schema that can be used with formik.
-10. [Material UI](https://mui.com/) Great UI Components for react, creating the readymade and coding free components.
-11. [React Icons](https://react-icons.github.io/react-icons/) Icons for using in various pages to make user Interaction more attractive.
-12. [React Toastify](https://fkhadra.github.io/react-toastify/introduction) For adding the Notification to alert the user about any changes made by him.
-13. [React Loader Spinner](https://mhnpd.github.io/react-loader-spinner/) Using this Library we added the loading components where the loading of data takes place.
-14. [Loading.io](https://loading.io/) Using these website created the Loading.gif for showing with the react loader spinner.
-15. [React Markdown Editor](https://uiwjs.github.io/react-md-editor/) Writing the blog post using these markdown components.
-16. [React Select](https://react-select.com/home), Select component with create in it.
-17. [Reading Time Estimator](https://www.npmjs.com/package/reading-time-estimator) Used for Read the whole blog and estimate the time to read it.
-18. [Error Page Reference](https://colorlib.com/etc/404/colorlib-error-404-3/) From the above website the error page design has been made.
-19. [moment.js](https://momentjs.com/) JS library for date utility for giving from how many hours or minutes have been over by uploading this blog.
-20. [animista.net](https://animista.net/) For providing the CSS Animations for the Hamburger menu component.
-21. [medium.com](https://medium.com) Search Page & Blog according to Tag Reference has been taken from Medium.com Website.
+[Bloogo APP](https://github.com/PrathameshDhande22/Bloogo-App)
 
 ## Guide
 
@@ -132,7 +108,7 @@ UPLOAD_PRESET=Cloudinary Upload preset
 7. Run
 
 ```
-python run.py
+poetry run python run.py
 ```
 
 😃😃 Backend is Running Successfully in your System.
