@@ -49,13 +49,13 @@ npx cypress run
 To run a specific `.feature` file:
 
 ```bash
-npx cypress run --spec "cypress/e2e/features/<folder>/<subFolder>/<file>.feature"
+npx cypress run --spec "e2e/features/<folder>/<subFolder>/<file>.feature"
 ```
 
 #### Example:
 
 ```bash
-npx cypress run --spec "cypress/e2e/features/Authentification/Login/01-user-login.feature"
+npx cypress run --spec "e2e/features/Authentication/Login/01-user-login.feature"
 ```
 
 This will run only the `01-user-login.feature` tests.
