@@ -72,8 +72,6 @@ After running the tests, results are stored in the `cypress/e2e/results` directo
 
 ### Default Paths
 
-- Screenshots: `cypress/screenshots/`
-- Videos: `cypress/videos/`
-- JSON reports (for Xray): `cypress/e2e/results/`
-
-You can customize these in your `cypress.json` configuration file.
+- Screenshots: `cypress/e2e/results/screenshots/`
+- Videos: `cypress/e2e/results/videos/`
+- JSON reports (for Xray): `cypress/e2e/results/reports`
