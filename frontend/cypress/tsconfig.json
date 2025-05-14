@@ -9,5 +9,10 @@
     "types": ["cypress"],
     "lib": ["ES2020", "DOM"]
   },
-  "include": ["cypress.config.ts", "cypress", "reporter-config.js"]
+  "include": [
+    "cypress.config.ts",
+    "cypress",
+    "reporter-config.js",
+    "cypress/**/*.ts"
+  ]
 }

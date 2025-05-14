@@ -2,6 +2,7 @@ import { defineConfig } from 'cypress';
 import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
 import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor';
 import { createEsbuildPlugin } from '@badeball/cypress-cucumber-preprocessor/esbuild';
+import { createTestUser, deleteTestUser } from './e2e/support/tasks';
 
 export default defineConfig({
   chromeWebSecurity: false,
@@ -20,6 +21,10 @@ export default defineConfig({
           plugins: [createEsbuildPlugin(config)]
         })
       );
+      on('task', {
+        createTestUser,
+        deleteTestUser
+      });
       return config;
     },
     fixturesFolder: 'e2e/fixtures',

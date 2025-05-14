@@ -1,5 +1,7 @@
+import './commands';
+
 before(() => {
-  Cypress.config('baseUrl', 'http://127.0.0.1:5173');
+  Cypress.config('baseUrl', 'http://localhost:5173');
 
   cy.intercept('/docs', {
     headers: { 'content-type': 'text/html' },
