@@ -61,3 +61,23 @@ export async function deleteTestUser({
 
   return null;
 }
+
+export async function createTag({ name }: { name: string }): Promise<null> {
+  await withDatabase(async (db) => {
+    const tags = db.collection('tags');
+    await tags.insertOne({
+      name
+    });
+  });
+
+  return null;
+}
+
+export async function deleteTag({ name }: { name: string }): Promise<void> {
+  await withDatabase(async (db) => {
+    const tags = db.collection('tags');
+    await tags.deleteOne({ name });
+  });
+
+  return null;
+}

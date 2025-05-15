@@ -2,7 +2,12 @@ import { defineConfig } from 'cypress';
 import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
 import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor';
 import { createEsbuildPlugin } from '@badeball/cypress-cucumber-preprocessor/esbuild';
-import { createTestUser, deleteTestUser } from './e2e/support/tasks';
+import {
+  createTag,
+  createTestUser,
+  deleteTag,
+  deleteTestUser
+} from './e2e/support/tasks';
 
 export default defineConfig({
   chromeWebSecurity: false,
@@ -23,7 +28,9 @@ export default defineConfig({
       );
       on('task', {
         createTestUser,
-        deleteTestUser
+        deleteTestUser,
+        createTag,
+        deleteTag
       });
       return config;
     },

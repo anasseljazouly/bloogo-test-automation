@@ -6,7 +6,7 @@ before(() => {
   cy.intercept('/docs', {
     headers: { 'content-type': 'text/html' },
     statusCode: 200
-  }).visit('/docs');
+  }).visit('/');
 });
 
 Cypress.on('uncaught:exception', (err) => {
