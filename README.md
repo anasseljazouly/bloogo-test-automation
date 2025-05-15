@@ -111,7 +111,7 @@ UPLOAD_PRESET=Cloudinary Upload preset
 poetry run python run.py
 ```
 
-😃😃 Backend is Running Successfully in your System.
+Backend is Running Successfully in your System.
 
 #### Running the Frontend
 
@@ -140,7 +140,11 @@ npm install
 npm run dev
 ```
 
-😃😃 The project setup is complete.
+The project setup is complete.
+
+#### Running E2E tests
+
+- [E2E tests](./frontend/cypress/README.md)
 
 ## 📑 Documentation
 
