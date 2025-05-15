@@ -149,3 +149,5 @@ The project setup is complete.
 ## 📑 Documentation
 
 - [Test Plan](./TestPlan.md)
+
+- [Bugs](./Bugs.md)

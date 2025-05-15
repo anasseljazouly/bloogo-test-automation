@@ -1,4 +1,4 @@
-# TEST_PLAN.md
+# TEST PLAN
 
 ## 1. Project Overview
 
