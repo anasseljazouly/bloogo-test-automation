@@ -126,6 +126,7 @@ cd frontend
 ```
 VITE_BASE_API=backend running url
 VITE_CLOUD_NAME=cloudinary cloud name
+MONGODB_URI=Your Mongodb URI
 ```
 
 3. Install the dependencies.
