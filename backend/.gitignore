@@ -1,3 +1,6 @@
 .env
 example.py
 example.mongodb.js
+robot-tests/log.html
+robot-tests/output.xml
+robot-tests/report.html
