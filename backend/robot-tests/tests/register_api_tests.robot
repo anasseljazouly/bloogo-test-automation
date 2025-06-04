@@ -2,8 +2,9 @@
 Library           RequestsLibrary
 Library           JSONLibrary
 Library           Collections
-Library    libs.MongoCleanup
+Library           ../lib/MongoCleanup.py
 Resource           ../variables/env.robot
+Resource           ../resources/keywords.robot
 Suite Setup       Create Session    bloogo    ${API_BASE_URL}
 
 *** Variables ***
@@ -44,12 +45,6 @@ Register With Duplicate Email Should Fail
     [Teardown]    Delete Test User    ${email}
 
 *** Keywords ***
-Generate Unique Email
-    [Arguments]    ${prefix}
-    ${timestamp}=    Get Time    epoch
-    ${email}=    Set Variable    ${prefix}${timestamp}@example.com
-    RETURN    ${email}
-
 Create User Payload
     [Arguments]    ${email}
     &{payload}=    Create Dictionary
